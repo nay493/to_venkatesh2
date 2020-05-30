@@ -1,0 +1,13 @@
+# Install windows cross compiler in Linux
+    sudo apt-get install mingw32 mingw32-binutils mingw32-runtime
+
+# Compile sources for windows
+    make
+
+# Linking static libraries
+   i586-mingw32msvc-gcc hello.c -o main.exe -I pthreads/include/ -L pthreads/dll/ -l pthreads/dll/libpthreadGC2.a
+
+#Linking Dynamic libraries
+    i586-mingw32msvc-gcc hello.c -o main.exe -I pthreads/include/ -L pthreads/dll/ -l pthreads/dll/pthreadGC2.dll
+
+
